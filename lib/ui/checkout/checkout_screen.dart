@@ -11,13 +11,13 @@ class CheckoutScreen extends StatelessWidget {
     BagProvider bagProvider = Provider.of<BagProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sacola"),
+        title: Text("Sacola"),
         actions: [
           TextButton(
             onPressed: () {
               bagProvider.clearBag();
             },
-            child: const Text("Limpar"),
+            child: Text("Limpar"),
           ),
         ],
       ),
@@ -27,7 +27,7 @@ class CheckoutScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Text("Pedidos", textAlign: TextAlign.center),
+              Text("Pedidos", textAlign: TextAlign.center),
               Column(
                 children: List.generate(
                   bagProvider.getMapByAmount().keys.length,
@@ -51,17 +51,17 @@ class CheckoutScreen extends StatelessWidget {
                             onPressed: () {
                               bagProvider.removeDish(dish);
                             },
-                            icon: const Icon(Icons.remove),
+                            icon: Icon(Icons.remove),
                           ),
                           Text(
                             bagProvider.getMapByAmount()[dish].toString(),
-                            style: const TextStyle(fontSize: 18.0),
+                            style: TextStyle(fontSize: 18.0),
                           ),
                           IconButton(
                             onPressed: () {
                               bagProvider.addAllDishes([dish]);
                             },
-                            icon: const Icon(Icons.add),
+                            icon: Icon(Icons.add),
                           ),
                         ],
                       ),

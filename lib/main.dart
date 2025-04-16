@@ -19,7 +19,7 @@ void main() async {
         ),
         ChangeNotifierProvider(create: (context) => BagProvider()),
       ],
-      child: const MyApp(),
+      child: MyApp(),
     ),
   );
 }

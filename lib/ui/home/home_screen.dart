@@ -14,19 +14,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     RestaurantData restaurantData = Provider.of<RestaurantData>(context);
     return Scaffold(
-      drawer: const Drawer(),
+      drawer: Drawer(),
       appBar: getAppBar(context: context),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+        padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: SingleChildScrollView(
           child: Column(
             spacing: 32.0,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(child: Image.asset('assets/logo.png', width: 147)),
-              const Text("Boas-vindas!"),
+              Text("Boas-vindas!"),
               TextFormField(),
-              const Text("Escolha por categoria"),
+              Text("Escolha por categoria"),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Image.asset("assets/banners/banner_promo.png"),
-              const Text("Bem avaliados"),
+              Text("Bem avaliados"),
               Column(
                 spacing: 16.0,
                 children: List.generate(restaurantData.listRestaurant.length, (
@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                   return RestaurantWidget(restaurant: restaurant);
                 }),
               ),
-              const SizedBox(height: 64.0),
+              SizedBox(height: 64.0),
             ],
           ),
         ),

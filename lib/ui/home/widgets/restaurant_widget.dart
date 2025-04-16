@@ -28,7 +28,7 @@ class RestaurantWidget extends StatelessWidget {
             children: [
               Text(
                 restaurant.name,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
               ),
               Row(
                 children: List.generate(restaurant.stars.toInt(), (index) {

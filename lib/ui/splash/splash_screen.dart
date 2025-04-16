@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
                   Image.asset('assets/logo.png', width: 192),
                   Column(
                     children: [
-                      const Text(
+                      Text(
                         "Um parceiro inovador para sua",
                         style: TextStyle(color: Colors.white, fontSize: 22.0),
                       ),
@@ -49,7 +49,7 @@ class SplashScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      child: const Text("Bora!"),
+                      child: Text("Bora!"),
                     ),
                   ),
                 ],
