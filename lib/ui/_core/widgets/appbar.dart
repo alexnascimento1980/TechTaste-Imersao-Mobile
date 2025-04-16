@@ -15,7 +15,7 @@ AppBar getAppBar({required BuildContext context, String? title}) {
         position: badges.BadgePosition.bottomStart(start: 0, bottom: 0),
         badgeContent: Text(
           bagProvider.dishesOnBag.length.toString(),
-          style: TextStyle(fontSize: 10),
+          style: const TextStyle(fontSize: 10),
         ),
         child: IconButton(
           onPressed: () {
@@ -28,7 +28,7 @@ AppBar getAppBar({required BuildContext context, String? title}) {
               ),
             );
           },
-          icon: Icon(Icons.shopping_basket),
+          icon: const Icon(Icons.shopping_basket),
         ),
       ),
     ],

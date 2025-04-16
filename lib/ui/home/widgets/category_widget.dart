@@ -26,7 +26,7 @@ class CategoryWidget extends StatelessWidget {
           ),
           Text(
             category,
-            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
           ),
         ],
       ),

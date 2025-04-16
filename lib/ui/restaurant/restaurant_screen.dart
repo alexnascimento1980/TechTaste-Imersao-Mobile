@@ -19,7 +19,7 @@ class RestaurantScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset('assets/${restaurant.imagePath}', width: 128),
-            Text(
+            const Text(
               "Mais pedidos",
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
@@ -39,7 +39,7 @@ class RestaurantScreen extends StatelessWidget {
                     onPressed: () {
                       context.read<BagProvider>().addAllDishes([dish]);
                     },
-                    icon: Icon(Icons.add),
+                    icon: const Icon(Icons.add),
                   ),
                 );
               }),
